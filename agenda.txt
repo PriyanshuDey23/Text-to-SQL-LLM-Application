@@ -1,0 +1,16 @@
+Agenda:- Text to Sql LLM Application
+
+process-
+
+prompt pass to llm model, model will give u a query
+and this query will read from sql database to retrive answer
+
+
+Implementation:-
+1. SQl Lite -- Insert some record -- python programming
+2. LLM App Communicate with gemini and gemini will interact with SQl Database 
+
+
+# Retrive the records from the database when the question is asked to the LLM 
+
+# def gemini response:- we will give input(Question) and our llm will convert to query(sql input) and then hit the sql lite
