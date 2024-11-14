@@ -2,8 +2,10 @@
 
 import sqlite3
 
-# Connect to SQLlite Database
+# Connect to SQLite Database
 connection=sqlite3.connect("student.db") # student.db :- database name , If doesnot exit then it will create
+      # Create a cursor object
+
 
 # Create a cursor record to insert records/create table
 cursor=connection.cursor() # Cursor will be responsible for traversing through entire table whthter add/retrive the records
@@ -11,7 +13,7 @@ cursor=connection.cursor() # Cursor will be responsible for traversing through e
 # Create the Table
 table_info="""
 
-Create table STUDENT(Name VARCHAR(25), Class VARCHAR(25), Section VARCHAR(25) );
+Create table STUDENT(NAME VARCHAR(25), ClASS VARCHAR(25), SECTION VARCHAR(25));
 
 """
 cursor.execute(table_info) # table creates with the columns
@@ -31,3 +33,8 @@ for row in data:
     print(row)
 
 # Db file crated E:\Text-to-SQL-LLM-Application\student.db
+
+# Close the Connection
+
+connection.commit()  # Final commit , Commit your changes in the database
+connection.close() # Close the connection
